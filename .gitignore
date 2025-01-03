@@ -11,7 +11,7 @@
 # This also avoids warnings when adding an already-checked file with an ignored parent.
 !/**/
 # Don't ignore any files/folders recursively in the following folders
-!/recipe/**
+!/recipes/**
 !/.ci_support/**
 
 # Since we ignore files/folders recursively, any folders inside
@@ -22,3 +22,4 @@
 /build_artifacts
 
 *.pyc
+!pixi.toml
