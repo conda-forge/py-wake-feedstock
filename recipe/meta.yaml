@@ -47,7 +47,7 @@ about:
   summary: PyWake a collection of wake models
   dev_url: https://gitlab.windenergy.dtu.dk/TOPFARM/PyWake
   license: MIT
-  license_file: LICENSE
+  license_file: py_wake-2.6.7.dist-info/LICENSE
 
 extra:
   recipe-maintainers:
