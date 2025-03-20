@@ -21,11 +21,12 @@ requirements:
     - pypandoc
     - pip
     - setuptools
+    - git-lfs
   run:
     - python >={{ python_min }}
     - matplotlib-base
     - numpy
-    - xarray
+    - xarray >=2024,<2025
     - netcdf4
     - h5netcdf
     - autograd
