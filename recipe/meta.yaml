@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  script: | 
+  script: |
     {{ CONDA }} install --yes git-lfs
     {{ PYTHON }} -m pip install -vv py_wake-{{ version }}-py3-none-any.whl
   number: 0
