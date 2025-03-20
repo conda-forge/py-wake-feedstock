@@ -21,7 +21,6 @@ requirements:
     - pypandoc
     - pip
     - setuptools
-    - git-lfs
   run:
     - python >={{ python_min }}
     - matplotlib-base
@@ -39,8 +38,8 @@ requirements:
 test:
   imports:
     - py_wake
-  commands:
-    - pip check
+  # commands: # git-lfs is not available from conda...
+  #   - pip check
   requires:
     - pip
     - python {{ python_min }}
