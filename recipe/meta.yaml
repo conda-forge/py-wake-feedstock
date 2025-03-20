@@ -1,6 +1,6 @@
 {% set name = "py-wake" %}
-{% set version = "2.6.7" %}
-{% set python_min = "3.7" %}
+{% set version = "2.6.9" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/py3/{{ name[0] }}/{{ name }}/py_wake-{{ version }}-py3-none-any.whl
-  sha256: 615f45e347b2d846a014dce0c700bb891538cc7ccff73feee9ddda15da7ba64c
+  sha256: 8dea7e1d08e330b640132c43e77007220e01fa0d89653d140eeef89250d3e82c
 
 build:
   noarch: python
@@ -25,7 +25,7 @@ requirements:
     - python >={{ python_min }}
     - matplotlib-base
     - numpy
-    - xarray
+    - xarray >=2024,<2025
     - netcdf4
     - h5netcdf
     - autograd
@@ -38,18 +38,19 @@ requirements:
 test:
   imports:
     - py_wake
-  commands:
-    - pip check
+  # commands: # git-lfs is not available from conda...
+  #   - pip check
   requires:
     - pip
     - python {{ python_min }}
+    - git-lfs
 
 about:
   home: https://gitlab.windenergy.dtu.dk/TOPFARM/PyWake
   summary: PyWake a collection of wake models
   dev_url: https://gitlab.windenergy.dtu.dk/TOPFARM/PyWake
   license: MIT
-  license_file: py_wake-2.6.7.dist-info/LICENSE
+  license_file: py_wake-{{ version }}.dist-info/LICENSE
 
 extra:
   recipe-maintainers:
