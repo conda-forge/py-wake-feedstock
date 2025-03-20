@@ -12,9 +12,7 @@ source:
 
 build:
   noarch: python
-  script: |
-    {{ CONDA }} install --yes git-lfs
-    {{ PYTHON }} -m pip install -vv py_wake-{{ version }}-py3-none-any.whl
+  script: {{ PYTHON }} -m pip install -vv py_wake-{{ version }}-py3-none-any.whl
   number: 0
 
 requirements:
@@ -36,6 +34,8 @@ requirements:
     - scipy
     - tqdm
     - joblib >=1.3
+    - git-lfs
+  build:
     - git-lfs
 
 test:
