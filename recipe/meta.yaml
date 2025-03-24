@@ -1,5 +1,5 @@
 {% set name = "py-wake" %}
-{% set version = "2.6.9" %}
+{% set version = "2.6.10" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/py3/{{ name[0] }}/{{ name }}/py_wake-{{ version }}-py3-none-any.whl
-  sha256: 8dea7e1d08e330b640132c43e77007220e01fa0d89653d140eeef89250d3e82c
+  sha256: 71dd42765248b297c8f68f76ea56eeb290f635b2335be6fb380445bc18f24bf1
 
 build:
   noarch: python
@@ -25,7 +25,7 @@ requirements:
     - python >={{ python_min }}
     - matplotlib-base
     - numpy
-    - xarray >=2024,<2025
+    - xarray
     - netcdf4
     - h5netcdf
     - autograd
@@ -50,7 +50,7 @@ about:
   summary: PyWake a collection of wake models
   dev_url: https://gitlab.windenergy.dtu.dk/TOPFARM/PyWake
   license: MIT
-  license_file: py_wake-{{ version }}.dist-info/LICENSE
+  license_file: py_wake-{{ version }}.dist-info/licenses/LICENSE
 
 extra:
   recipe-maintainers:
