@@ -25,7 +25,7 @@ requirements:
     - python >={{ python_min }}
     - matplotlib-base
     - numpy
-    - xarray >=2024,<2025
+    - xarray
     - netcdf4
     - h5netcdf
     - autograd
@@ -50,7 +50,7 @@ about:
   summary: PyWake a collection of wake models
   dev_url: https://gitlab.windenergy.dtu.dk/TOPFARM/PyWake
   license: MIT
-  license_file: py_wake-{{ version }}.dist-info/LICENSE
+  license_file: py_wake-{{ version }}.dist-info/licenses/LICENSE
 
 extra:
   recipe-maintainers:
