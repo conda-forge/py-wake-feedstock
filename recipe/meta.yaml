@@ -1,6 +1,6 @@
 {% set name = "py-wake" %}
-{% set version = "2.6.19" %}
-{% set python_min = "3.9" %}
+{% set version = "2.6.20" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/py3/{{ name[0] }}/{{ name }}/py_wake-{{ version }}-py3-none-any.whl
-  sha256: 7f4124b67cde12837b343d3d1210d4a91b86fbfc71ff5f26970fc3b25cefb8ed
+  sha256: 1958e289899f9e1faae217beb1a8d9deb373b3e042804718a67127690fcb9a05
 
 build:
   noarch: python
